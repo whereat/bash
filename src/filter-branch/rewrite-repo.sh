@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ROOT = ${SCRIPTS}/filter-branch/
+ROOT = ${SCRIPTS}/src/filter-branch/
 
 ${ROOT}/replace-authors.sh &&
     ${ROOT}/strip-broken-pgp.sh &&

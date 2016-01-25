@@ -2,8 +2,7 @@
 
 while read REPO
 do
-    cd $REPO &&
-        ${SCRIPTS}/revise-repos/overwrite-contrib-guidelines &&
+    cd ${REPO}.git &&
+        ${SCRIPTS}/src/force-push-repo.sh &&
         cd ..;
 done < ${SCRIPTS}/assets/repos.txt
-

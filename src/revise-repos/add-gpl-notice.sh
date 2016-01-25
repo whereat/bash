@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # usage: from `path/to/src`, run:
-#   $ $SCRIPTS/revise-repos/add-gpl-notice.sh
+#   $ $SCRIPTS/src/revise-repos/add-gpl-notice.sh
 # or (from anywhere), run:
-#   $ SRC="path/to/src" $SCRIPTS/revise-repos/add-gpl-notice.sh
+#   $ SRC="path/to/src" $SCRIPTS/src/revise-repos/add-gpl-notice.sh
 
 append(){ # $1: target filepath, $2: boilerplate path;
     cat "$2" <(echo) "$1" > /tmp/out && mv /tmp/out "$1"

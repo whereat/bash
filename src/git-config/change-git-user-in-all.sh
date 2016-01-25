@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# usage: NAME=<your_name> EMAIL=<your_email> $SCRIPTS/git-config/change-git-user.sh
+# usage: NAME=<your_name> EMAIL=<your_email> $SCRIPTS/src/git-config/change-git-user.sh
 
 while read REPO
 do
