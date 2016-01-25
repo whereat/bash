@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd ${PROJECT_ROOT}
 
 while read REPO
 do
