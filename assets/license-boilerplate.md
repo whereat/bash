@@ -1,7 +1,7 @@
 NOTICE
 ======
 
-Copyright (c) 2015-present, Total Location Test Paragraph.
+Copyright (c) 2016-present, Total Location Test Paragraph.
 All rights reserved.
 
 The program in this repository is free software:
