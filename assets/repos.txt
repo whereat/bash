@@ -1,4 +1,5 @@
 whereat-android
+whereat-bash
 whereat-blog
 whereat-donation-server
 whereat-loadtest
