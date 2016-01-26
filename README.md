@@ -3,7 +3,7 @@
 This is the entry point to the codebase. Inside this repo are a set of scripts that should get you set up and ready to contribute.
 
 ##Set Up:
-1. Clone this repo into your working directory 
+1. Clone this repo into your working directory
     - ```git clone git@github.com:whereat/whereat-bash.git```
 2. Export necessary environment variables
     - ```cd whereat-bash && export SCRIPTS=`pwd` && export PROJECT_ROOT=../```
