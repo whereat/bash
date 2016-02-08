@@ -3,7 +3,7 @@
 while read REPO
 do
     cd $REPO &&
-        ${SCRIPTS}/src/revise-repos/overwrite-contrib-guidelines &&
+        ${WHEREAT_SCRIPTS}/src/revise-repos/overwrite-contrib-guidelines &&
         cd ..;
-done < ${SCRIPTS}/assets/repos.txt
+done < ${WHEREAT_SCRIPTS}/assets/repos.txt
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# usage REPO=<name-of-repo> ${WHAT_SCRIPTS}/src/remotes/clone-repo.sh
+# usage REPO=<name-of-repo> ${WHEREAT_SCRIPTS}/src/remotes/clone-repo.sh
 
 echo "cloning $REPO"
 

@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # usage: from `path/to/src`, run:
-#   $ $SCRIPTS/src/revise-repos/add-gpl-notice.sh
+#   $ $WHEREAT_SCRIPTS/src/revise-repos/add-gpl-notice.sh
 # or (from anywhere), run:
-#   $ SRC="path/to/src" $SCRIPTS/src/revise-repos/add-gpl-notice.sh
+#   $ SRC="path/to/src" $WHEREAT_SCRIPTS/src/revise-repos/add-gpl-notice.sh
 
 append(){ # $1: target filepath, $2: boilerplate path;
     cat "$2" <(echo) "$1" > /tmp/out && mv /tmp/out "$1"
@@ -24,13 +24,13 @@ maybe-append(){ # $1: target filepath; $2: boilerplate path; $3: filetype
 
 dispatch-append() { # $1: target filepath
     if [[ "$1" =~ ".xml" ]]; then
-        maybe-append "$1" "$SCRIPTS/assets/copyright-boilerplate-xml.txt" "xml"
+        maybe-append "$1" "$WHEREAT_SCRIPTS/assets/copyright-boilerplate-xml.txt" "xml"
     elif [[ "$1" =~ ".md" ]]; then
-        maybe-append "$1" "$SCRIPTS/assets/copyright-boilerplate-tag.txt" ""
+        maybe-append "$1" "$WHEREAT_SCRIPTS/assets/copyright-boilerplate-tag.txt" ""
     elif [[ "$1" =~ ".conf" ]]; then
-        maybe-append "$1" "$SCRIPTS/assets/copyright-boilerplate-pound.txt" ""
+        maybe-append "$1" "$WHEREAT_SCRIPTS/assets/copyright-boilerplate-pound.txt" ""
     else
-        maybe-append "$1" "$SCRIPTS/assets/copyright-boilerplate-star.txt" ""
+        maybe-append "$1" "$WHEREAT_SCRIPTS/assets/copyright-boilerplate-star.txt" ""
     fi
 }
 

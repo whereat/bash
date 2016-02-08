@@ -1,8 +1,8 @@
 #!/bin/bash
 
-cd ${PROJECT_ROOT}
+cd ${WHEREAT_ROOT}
 
 while read REPO
 do
     git clone git@github.com:whereat/${REPO}.git
-done < ${SCRIPTS}/assets/repos.txt
+done < ${WHEREAT_SCRIPTS}/assets/repos.txt

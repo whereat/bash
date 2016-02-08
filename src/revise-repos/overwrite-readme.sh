@@ -1,5 +1,5 @@
 #!/bin/bash
 
-# usage: $SCRIPTS/src/revise-repos/overwrite-readme.sh
+# usage: $WHEREAT_SCRIPTS/src/revise-repos/overwrite-readme.sh
 
-cat "$SCRIPTS/assets/readme-boilerplate.md" > README.md
+cat "$WHEREAT_SCRIPTS/assets/readme-boilerplate.md" > README.md

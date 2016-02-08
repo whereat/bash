@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # usage: from `path/to/src`, run:
-#   $ $SCRIPTS/src/revise-repos/strip-gpl-notice.sh
+#   $ $WHEREAT_SCRIPTS/src/revise-repos/strip-gpl-notice.sh
 # or (from anywhere), run:
-#   $ SRC="path/to/src" $SCRIPTS/src/revise-repos/strip-gpl-notice.sh
+#   $ SRC="path/to/src" $WHEREAT_SCRIPTS/src/revise-repos/strip-gpl-notice.sh
 
 strip(){ # $1 = target filepath; $2 = boilerplate path; $3 numlines to strip
     sed -i -e "1,$2" "$1"

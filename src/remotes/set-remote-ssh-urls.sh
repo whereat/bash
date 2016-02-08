@@ -9,7 +9,7 @@ do
         git remote rm origin &&
         git remote add origin git@whereat-github:whereat/${REPO}.git &&
         cd ..;
-done < ${SCRIPTS}/assets/repos.txt
+done < ${WHEREAT_SCRIPTS}/assets/repos.txt
 
 
 

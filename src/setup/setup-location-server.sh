@@ -1,17 +1,17 @@
 #!/bin/bash
 
-# usage: ${WHAT_SCRIPTS}/src/build/build-location-server.sh
+# usage: ${WHEREAT_SCRIPTS}/src/build/build-location-server.sh
 
-cd "$WHAT_ROOT"
+cd "$WHEREAT_ROOT"
 REPO=whereat-location-server
 
 if [ ! -d "$REPO" ]; then
-    echo ${WHAT_SCRIPTS}
-    REPO="$REPO" ${WHAT_SCRIPTS}/src/remotes/clone-repo.sh
+    echo ${WHEREAT_SCRIPTS}
+    REPO="$REPO" ${WHEREAT_SCRIPTS}/src/remotes/clone-repo.sh
 fi
 
 cd ${REPO}
-REPO="$REPO" ${WHAT_SCRIPTS}/src/git-config/add-gpg-to-one.sh
+REPO="$REPO" ${WHEREAT_SCRIPTS}/src/git-config/add-gpg-to-one.sh
 cd ../
 
-sudo docker run -it --name ${REPO} -p 15000:5000 -v ${WHAT_ROOT}/${REPO}:/${REPO} whereat/${REPO}:0.1 bash
+docker run -it --name ${REPO} -p 15000:5000 -v ${WHEREAT_ROOT}/${REPO}:/${REPO} whereat/${REPO}:0.1 bash
