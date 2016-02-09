@@ -7,7 +7,8 @@ This is the entry point to the codebase. Inside this repo are a set of scripts t
 Motivation: GPG (GNU Privacy Guard) is an implementation of public-private key encryption. This project currently uses GPG to sign commits to verify the identity of contributors and is exploring using it for credentials management.
 
 1. Check if GPG is installed
-    `$ which gpg`
+    
+  `$ which gpg`
 1. Install GPG (if needed)
   - **MAC USERS** `$ brew install gpg`
   - **LINUX USERS** use your favorite package manager on Linux to install gpg
@@ -33,7 +34,7 @@ Motivation: GPG (GNU Privacy Guard) is an implementation of public-private key e
    ```
     Replace the text in angle brackets as follows:
    * To find `<YOUR_PGP_KEY_ID>`:
-      1. Run `gpg -K`
+      1. `$ gpg -K`
       1. You should see a line that looks like:
 
         ```
@@ -43,7 +44,7 @@ Motivation: GPG (GNU Privacy Guard) is an implementation of public-private key e
         `1E4DFE5A` is your PGP key
     * To find `<PATH_TO_YOUR_WHERAT_REPOS>`:
       1. `cd` into the directory in which you are keeping where@ repos
-      1. issue the following command: `pwd`
+      1. `$ pwd`
       1. this should print out the full path to the directory, for example:
          `/home/awesomecontributor/code/whereat/`
     * Given the above examples, we would add the following lines to `~/.bashrc`:
