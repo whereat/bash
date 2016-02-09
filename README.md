@@ -6,23 +6,55 @@ This is the entry point to the codebase. Inside this repo are a set of scripts t
 
 Motivation: GPG (GNU Privacy Guard) is an implementation of public-private key encryption. This project currently uses GPG to sign commits to verify the identity of contributors and is exploring using it for credentials management.
 
-1. Install GPG
+1. Check if GPG is installed
+   * a good way to do this, is to drop into the terminal and type:
+   ```
+   $ which gpg
+   ```
+1. Install GPG (if needed)
   - `brew install gpg` on Mac, or use your favorite package manager on Linux if not already present
+  - you might also enjoy the silky smooth UX of [GPG Tools](https://gpgtools.org/)
+1. Check if you have a PGP Key
+   - a good way to do this is with the following bash command:
+   ```
+   $ gpg -K
+   ```
+   If you see an entry with your email address: YAY! You have a PGP key. You can skip the following step.
 1. Generate a GPG key (for more information, see https://www.madboa.com/geek/gpg-quickstart/)
   - `gpg --gen-key`
-  - Remember your passphrase!
+  - when asked which type of key you want, choose option (1) [RSA/DSA]
+  - when asked how many bits you would like, we recommend 4096
+  - __Remember your passphrase!__ (NO REALLY! If you forget this, it's REALLY SAD!)
 
 ## To clone all repos
 
-1. Export the following environment variables in your ~/.bashrc:
-    * `WHEREAT_KEY`: the GPG signing key you're using for this project. To find it:
+1. Open the file located at `~/.bashrc` and insert the following lines:
+   ```
+   export WHEREAT_KEY=<YOUR_PGP_KEY_ID>
+   export WHEREAT_ROOT=<PATH_TO_YOUR_WHERAT_REPOS>
+   ```
+1. Replace the text in angle brackets as follows:
+   * To find <YOUR_PGP_KEY_ID>:
       1. Run `gpg -K`
-      2. You should see a line that looks like:
+      1. You should see a line that looks like:
+
         ```
         sec   2048R/1E4DFE5A 2015-10-06 [expires: 2017-07-19]
         ```
-        `1E4DFE5A` is the value of `WHEREAT_KEY` to export
-    * `WHEREAT_ROOT`: the project root for all where@ repos (e.g., `~/my-code/whereat`)
+
+        `1E4DFE5A` is your PGP key
+    * To find <PATH_TO_YOUR_WHERAT_REPOS>:
+      1. `cd` into the folder in which you are keeping where@ repos
+      1. issue the following command: `pwd`
+      1. this should print out the full path to the directory, for example:
+         `/home/awesomecontributor/code/whereat/`
+    * Given the above examples, we would add the following lines to `~/.bashrc`:
+
+      ```
+      export WHEREAT_KEY=1E4DFE5A
+      export WHEREAT_ROOT=/home/awesomecontributor/code/whereat/
+      ```
+
 1. Source the file where you put your environment variables
   - e.g., `source ~/.bashrc`
 1. Clone the scripts repo into `$WHEREAT_ROOT`
