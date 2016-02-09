@@ -29,11 +29,12 @@ Motivation: GPG (GNU Privacy Guard) is an implementation of public-private key e
 ## To clone all repos
 
 1. Open the file located at `~/.bashrc` and insert the following lines:
+   
    ```
    export WHEREAT_KEY=<YOUR_PGP_KEY_ID>
    export WHEREAT_ROOT=<PATH_TO_YOUR_WHERAT_REPOS>
    ```
-1. Replace the text in angle brackets as follows:
+    Replace the text in angle brackets as follows:
    * To find <YOUR_PGP_KEY_ID>:
       1. Run `gpg -K`
       1. You should see a line that looks like:
@@ -55,8 +56,7 @@ Motivation: GPG (GNU Privacy Guard) is an implementation of public-private key e
       export WHEREAT_ROOT=/home/awesomecontributor/code/whereat/
       ```
 
-1. Source the file where you put your environment variables
-  - e.g., `source ~/.bashrc`
+1. Source the file where you put your environment variables (`source ~/.bashrc`)
 1. Clone the scripts repo into `$WHEREAT_ROOT`
    ```
    cd $WHEREAT_ROOT
