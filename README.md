@@ -35,7 +35,7 @@ Motivation: GPG (GNU Privacy Guard) is an implementation of public-private key e
    export WHEREAT_ROOT=<PATH_TO_YOUR_WHERAT_REPOS>
    ```
     Replace the text in angle brackets as follows:
-   * To find <YOUR_PGP_KEY_ID>:
+   * To find `<YOUR_PGP_KEY_ID>`:
       1. Run `gpg -K`
       1. You should see a line that looks like:
 
@@ -44,7 +44,7 @@ Motivation: GPG (GNU Privacy Guard) is an implementation of public-private key e
         ```
 
         `1E4DFE5A` is your PGP key
-    * To find <PATH_TO_YOUR_WHERAT_REPOS>:
+    * To find `<PATH_TO_YOUR_WHERAT_REPOS>`:
       1. `cd` into the folder in which you are keeping where@ repos
       1. issue the following command: `pwd`
       1. this should print out the full path to the directory, for example:
