@@ -55,14 +55,14 @@ Motivation: GPG (GNU Privacy Guard) is an implementation of public-private key e
       export WHEREAT_KEY=1E4DFE5A
       export WHEREAT_ROOT=/home/awesomecontributor/code/whereat/
       ```
-
 1. Source the file where you put your environment variables (`source ~/.bashrc`)
 1. Clone the scripts repo into `$WHEREAT_ROOT`
    ```
    cd $WHEREAT_ROOT
    git clone git@github.com:whereat/whereat-bash.git
    ```
-1. Add a `WHEREAT_SCRIPTS` environment variable to your .bashrc and source again:
+1. Add a `WHEREAT_SCRIPTS` environment variable to your .bashrc and source again
+
    ```
    cd whereat-bash
    echo "export WHEREAT_SCRIPTS=`pwd`" >> ~/.bashrc
@@ -84,7 +84,8 @@ Motivation: GPG (GNU Privacy Guard) is an implementation of public-private key e
       - Run `docker-machine create --driver virtualbox default`
     1. Set up the Docker environment
       - Run `eval "$(docker-machine env default)"`
-1. Run the script to build the docker container for the location server
+1. Run the script to build the docker container for the location server:
+
    ```
    ${WHEREAT_SCRIPTS}/src/setup/setup-location-server.sh
    ```
