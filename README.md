@@ -93,7 +93,11 @@ Motivation: GPG (GNU Privacy Guard) is an implementation of public-private key e
       `$ eval "$(docker-machine env default)"`
 1. **MAC USERS ONLY** To configure port forwarding from the linux vm to your mac machine
     
-    `$ VBoxManage modifyvm "default" --natpf1 "whereat,tcp,,5000,,5000”`
+    ```
+    $ docker-machine stop default
+    $ VBoxManage modifyvm "default" --natpf1 "whereat,tcp,,5000,,5000"
+    $ docker-machine start default
+    ```
 1. Build the docker container for the location server:
 
    `$ ${WHEREAT_SCRIPTS}/src/docker/connect-to-location-server.sh`
