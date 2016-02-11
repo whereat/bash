@@ -82,23 +82,26 @@ Motivation: GPG (GNU Privacy Guard) is an implementation of public-private key e
 1. Add the environment variables to a .env file in `$WHEREAT_ROOT/whereat-location-server`
 1. Set up the Docker environment
   - Linux: start the Docker daemon
-    1. If this doesn't work, try installing docker-toolbox at https://docs.docker.com/engine/installation/linux/
+  
+    `$ sudo service docker restart`
+    
+    If this doesn't work, try installing docker-toolbox at https://docs.docker.com/engine/installation/linux/
   - Mac:
-    1. Download and install docker-toolbox from https://www.docker.com/products/docker-toolbox
-    1. Set up a default Docker machine
+    1. If you don't already have Docker, download and install docker-toolbox from https://www.docker.com/products/docker-toolbox
+    1. Create a default Docker machine if you don't have one already
       
-      `$ docker-machine create --driver virtualbox default`
-    1. Set up the Docker environment
+      `$ docker-machine create --driver virtualbox <docker machine name>`
+    1. Set which Docker machine (i.e. environment) all commands will be run in
       
-      `$ eval "$(docker-machine env default)"`
-1. **MAC USERS ONLY** To configure port forwarding from the linux vm to your mac machine
+      `$ eval "$(docker-machine env <docker machine name>)"`
+1. **MAC USERS ONLY** To configure port forwarding from the Docker machine to your mac machine
     
     ```
-    $ docker-machine stop default
-    $ VBoxManage modifyvm "default" --natpf1 "whereat,tcp,,5000,,5000"
-    $ docker-machine start default
+    $ docker-machine stop <docker machine name>
+    $ VBoxManage modifyvm "<docker machine name>" --natpf1 "whereat,tcp,,5000,,5000"
+    $ docker-machine start <docker machine name>
     ```
-1. Build the docker container for the location server:
+1. Build the docker container in the Docker machine for the location server:
 
    `$ ${WHEREAT_SCRIPTS}/src/docker/connect-to-location-server.sh`
 1. This should open a docker container that you can use!!!
