@@ -12,7 +12,7 @@ if [ $# -eq 1 ]; then
 fi
 
 if [ ! -d "$REPO" ]; then
-    REPO="$REPO" ${WHEREAT_SCRIPTS}/src/remotes/clone-REPO.sh
+    REPO="$REPO" ${WHEREAT_SCRIPTS}/src/remotes/clone-repo.sh
     cd ${REPO}
     REPO="$REPO" ${WHEREAT_SCRIPTS}/src/git-config/add-gpg-to-one.sh
     cd $WHEREAT_ROOT
