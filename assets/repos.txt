@@ -4,6 +4,6 @@ whereat-blog
 whereat-donation-server
 whereat-loadtest
 whereat-location-server
-whereat-native-android
+whereat-native
 whereat-simulate
 whereat-web
