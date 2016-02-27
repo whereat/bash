@@ -7,3 +7,6 @@ whereat-location-server
 whereat-native
 whereat-simulate
 whereat-web
+wiki.wiki
+React-Native-LOSTLocationProvider
+okhttp
