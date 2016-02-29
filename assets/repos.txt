@@ -10,3 +10,4 @@ whereat-web
 wiki.wiki
 React-Native-LOSTLocationProvider
 okhttp
+react-native
