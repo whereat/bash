@@ -69,9 +69,9 @@ Motivation: GPG (GNU Privacy Guard) is an implementation of public-private key e
    $ echo "export WHEREAT_SCRIPTS=`pwd`" >> ~/.bashrc
    $ source ~/.bashrc
    ```
-1. Run clone-repos.sh to clone entire codebase
-  
-  `$ ./src/remotes/clone-repos.sh`
+
+1. Fork all needed repos to your personal Github account 
+1. Clone all forked repos to `$WHEREAT_ROOT`
 1. Run add-gpg-to-all.sh to set up all repos to sign commits with gpg key.
     
   `$ ./src/git-config/add-gpg-to-all.sh`
